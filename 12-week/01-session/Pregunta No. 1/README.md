@@ -1,0 +1,114 @@
+# Sistema Bancario Híbrido (SCRUM + RUP)
+
+**Autora:** I. Brandon Sánchez Rojas  
+**Curso:** Arquitectura de Software  
+**Semana:** 12 – Sesión 01  
+**Fecha:** Octubre 2025
+
+---
+
+## Descripción general
+
+Este proyecto representa el **Diagrama C4 – Nivel de Contexto** de un _Sistema Bancario Híbrido_, diseñado bajo un **modelo metodológico mixto** que integra las ventajas de **SCRUM** y **RUP (Rational Unified Process)**.
+
+El objetivo es analizar la pertinencia de metodologías de desarrollo en sistemas críticos como el bancario, los cuales demandan **seguridad, trazabilidad, estabilidad y cumplimiento normativo**, sin perder la capacidad de **innovar y adaptarse**.
+
+---
+
+## Arquitectura planteada (Nivel de Contexto C4)
+
+El diagrama C4 muestra la interacción entre los actores y los principales componentes del sistema.  
+Se proponen dos enfoques complementarios:
+
+### Core Bancario (RUP)
+
+- Procesa transacciones, calcula intereses y mantiene integridad de datos.
+- Usa una metodología estructurada, orientada a la documentación y control de versiones.
+
+### Portal / App Bancaria (SCRUM)
+
+- Módulo ágil enfocado en la experiencia del cliente.
+- Permite iteraciones rápidas y entregas continuas.
+- Se integra con el core mediante API Gateway y autenticación segura (OAuth2).
+
+---
+
+## Diagrama C4 – Nivel de Contexto
+
+**Archivo fuente:** `C4_Banco_Contexto.puml`  
+**Exportado como:** `C4_Banco_Contexto.svg`
+
+![Diagrama C4 Contexto](C4_Banco_Contexto.svg)
+
+**Descripción breve:**
+
+- El _Cliente Bancario_ interactúa con el _Portal Bancario_ (SCRUM).
+- El _Portal_ se comunica con el _Core Bancario_ (RUP).
+- El _Auditor Externo_ revisa trazabilidad y cumplimiento a través de logs.
+
+---
+
+## Herramientas utilizadas
+
+| Herramienta            | Uso principal                 | Observaciones                           |
+| ---------------------- | ----------------------------- | --------------------------------------- |
+| **PlantUML (jebbs)**   | Creación del diagrama C4      | Integrado en VS Code                    |
+| **Graphviz**           | Renderizado del diagrama UML  | Usa el comando `dot`                    |
+| **Visual Studio Code** | Edición y visualización       | Facilita previsualización y exportación |
+| **Git & GitHub**       | Control de versiones          | Publicación del proyecto                |
+| **Markdown (.md)**     | Documentación del repositorio | Compatible con plataformas educativas   |
+
+---
+
+## Reflexión metodológica
+
+Los entornos bancarios requieren **procesos rigurosos, trazables y seguros**, lo cual se logra con **RUP**.  
+Sin embargo, para los módulos de interacción con usuarios, se necesita **agilidad y mejora continua**, que aporta **SCRUM**.
+
+Por ello, se propone una **arquitectura híbrida**:
+
+- RUP: Para el núcleo transaccional y cumplimiento normativo.
+- SCRUM: Para el front-end, microservicios y desarrollo evolutivo.
+
+Este equilibrio asegura **innovación con estabilidad**, adaptado a las necesidades del sistema financiero moderno.
+
+---
+
+## Bibliografía
+
+- Pressman, R. S. (2014). _Ingeniería del Software: Un Enfoque Práctico._ McGraw-Hill.
+- Sommerville, I. (2016). _Software Engineering_ (10th ed.). Pearson Education.
+- Schwaber, K., & Sutherland, J. (2020). _The Scrum Guide._ Scrum.org.
+- ISO/IEC 27001:2013. _Information Security Management Systems._
+- IEEE 830: _Software Requirements Specification (SRS)._
+
+---
+
+## Estructura del proyecto
+
+12-week/
+└── 01-session/
+└── Pregunta No. 1/
+├── C4_Banco_Contexto.puml
+├── C4_Banco_Contexto.png
+└── README.md
+
+---
+
+## Cómo visualizar el diagrama
+
+1. Abre el archivo `C4_Banco_Contexto.puml` en VS Code.
+2. C4_Banco_Contexto.png **PNG**.
+
+---
+
+## Conclusión
+
+Este proyecto evidencia cómo la **metodología híbrida SCRUM–RUP** logra equilibrar:
+
+- La **agilidad del desarrollo iterativo**, y
+- El **control riguroso de los sistemas financieros**.
+
+Permite mantener la innovación en el front-end, sin comprometer la seguridad y trazabilidad del core bancario.
+
+---

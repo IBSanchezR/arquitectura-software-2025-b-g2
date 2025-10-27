@@ -1,0 +1,23 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+title Diagrama C4 - Nivel de Contexto
+caption "Sistema Bancario Híbrido (SCRUM + RUP) - Edna Ortiz"
+
+' Personas
+Person(Cliente, "Cliente Bancario", "Usa los servicios del banco para realizar transacciones digitales.")
+Person_Ext(Auditor, "Auditor Externo", "Revisa trazabilidad y cumplimiento normativo.")
+
+' Sistema principal
+System_Boundary(Banco, "Sistema Bancario") {
+    System(CoreBank, "Core Bancario", "Procesa transacciones, calcula intereses y gestiona cuentas.")
+    System(Portal, "Portal / App Bancaria", "Desarrollado bajo SCRUM. Permite al cliente acceder a sus servicios.")
+}
+
+' Relaciones
+Rel(Cliente, Portal, "Consulta y gestiona sus cuentas", "HTTPS / REST API")
+Rel(Portal, CoreBank, "Solicita operaciones seguras", "API Gateway + OAuth2")
+Rel(Auditor, CoreBank, "Realiza auditorías periódicas", "Registros y logs")
+
+SHOW_LEGEND()
+@enduml
